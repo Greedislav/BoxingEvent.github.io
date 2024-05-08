@@ -353,6 +353,7 @@
   }
 
   .u-section-3 .u-group-1 {
+    top: -1rem;
     min-height: 310px;
     width: auto;
     margin-right: initial;
