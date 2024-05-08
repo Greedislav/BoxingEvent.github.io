@@ -515,6 +515,7 @@
 @media (max-width: 575px) {
   .u-section-4 .u-text-1 {
     font-size: 2.25rem;
+    top: -2rem;
   }
 
   .u-section-4 .u-group-1 {
