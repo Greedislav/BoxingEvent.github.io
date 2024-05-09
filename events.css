@@ -23,6 +23,40 @@
   }
 }
 
+/* Стилизация контейнера карты */
+#container {
+  top: 40rem;
+  width: 500px; /* Ширина контейнера карты */
+  height: 400px; /* Высота контейнера карты */
+  border: 1px solid #ccc; /* Граница контейнера карты */
+  border-radius: 5px; /* Скругление углов контейнера карты */
+  margin-top: 20px; /* Верхний отступ контейнера карты */
+}
+
+/* Стилизация элементов управления картой (например, кнопок зума) */
+.mapboxgl-ctrl-zoom {
+  background-color: rgba(255, 255, 255, 0.7); /* Прозрачный белый фон */
+  border-radius: 5px; /* Скругление углов элементов управления */
+}
+
+/* Стилизация маркера */
+.mapboxgl-marker {
+  width: 30px; /* Ширина маркера */
+  height: 30px; /* Высота маркера */
+  background-color: #ff0000; /* Цвет маркера (красный) */
+  border-radius: 50%; /* Круглый маркер */
+  border: 2px solid #fff; /* Белая обводка маркера */
+}
+  /* Медиа-запрос для мобильных устройств (ширина экрана менее 768px) */
+@media (max-width: 767px) {
+  #container {
+    height: 330px; /* Уменьшаем высоту карты для мобильных устройств */
+    margin-left: -12rem;
+    margin-top: 12rem;
+  }
+}
+
+
 @media (max-width: 575px) {
    .u-section-1 {
     min-height: 223px;
@@ -74,10 +108,13 @@
   }
 
   .u-section-2 .u-image-1 {
-    width: 440px;
-    height: 440px;
-    margin-left: -50px;
-    margin-right: -50px;
+    width: 458px;
+    height: 445px;
+    margin-left: -56px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+}
   }
 } .u-section-3 {
   background-image: url("images/IRFIN1.png");
@@ -89,7 +126,7 @@
 }
 
 .u-section-3 .u-group-1 {
-  top: 8rem; 
+  top: 4rem; 
   width: 559px;
   min-height: 518px;
   height: auto;
@@ -379,8 +416,28 @@
     margin-top: 31px;
     padding: 8px 12px 9px 11px;
   }
-} .u-section-4 {
-  min-height: 1182px;
+} .u-section-4 {/* Общие стили для слайдера */
+  .u-carousel-item img {
+    width: 100%; /* Ширина изображения в слайде будет равна ширине слайдера */
+    height: 980px; /* Высота изображения будет автоматически подстраиваться */
+  }
+  
+  /* Медиа-запрос для мобильных устройств (ширина экрана менее 768px) */
+  @media (max-width: 767px) {
+    .u-slider-1 {
+      width: 100%; /* Ширина слайдера на мобильных устройствах будет 100% */
+    }
+  }
+  
+  /* Медиа-запрос для компьютеров и планшетов (ширина экрана 768px и более) */
+  @media (min-width: 768px) {
+    .u-slider-1 {
+      width: 50%; /* Ширина слайдера на компьютерах и планшетах будет 50% */
+      margin: 0 auto; /* Центрирование слайдера по горизонтали */
+    }
+  }
+  
+ 
 }
 
 .u-section-4 .u-text-1 {
@@ -392,8 +449,8 @@
 }
 
 .u-section-4 .u-group-1 {
-  width: 607px;
-  min-height: 450px;
+  width: 651px;
+  min-height: 844px;
   height: auto;
   margin: 11px auto 0;
 }
@@ -403,7 +460,7 @@
 }
 
 .u-section-4 .u-slider-1 {
-  min-height: 380px;
+  min-height: 400px;
   height: auto;
   margin-top: 0;
   margin-bottom: 0;
@@ -520,7 +577,9 @@
 
   .u-section-4 .u-group-1 {
     width: 340px;
-   top: -3rem;
+    min-height: 400px;
+    top: -60px;
+    left: -15px;
   }
 
   .u-section-4 .u-carousel-control-1 {
@@ -536,6 +595,8 @@
   .u-section-4 .u-text-2 {
     font-size: 1.25rem;
     margin-left: calc(((100% - 340px) / 2) + 96px);
+    top: -65px;
+    left: -95px;
   }
 }.u-section-5 .u-sheet-1 {
   min-height: 740px;
@@ -667,10 +728,15 @@
 
 @media (max-width: 575px) {
   .u-section-5 .u-sheet-1 {
-    min-height: 756px;
-  }
+    min-height: 400px;
+    width: 330px;
+    margin-top: 29px;
+    margin-left: auto;
+    margin-right: auto;
+   }
 
   .u-section-5 .u-text-1 {
+    top: -30px;
     width: 340px;
     margin-top: 109px;
     margin-left: auto;
@@ -680,17 +746,21 @@
   .u-section-5 .u-text-2 {
     width: 117px;
     margin-top: -234px;
+    top: 20px;
   }
 
   .u-section-5 .u-text-3 {
     width: 146px;
     margin-top: 215px;
+    top: -20px;
+    left: 0px;
   }
 
   .u-section-5 .u-text-4 {
     width: 340px;
     margin-left: auto;
     margin-right: auto;
+    top: -10px;
   }
 } .u-section-6 {
   background-image: url("images/Rectangle24.png");
@@ -967,13 +1037,19 @@
 }
 
 .u-section-7 .u-text-4 {
-  font-size: 1.875rem;
-  margin: 48px auto 0 100px;
-}
+  font-size: 0.875rem;
+    margin-top: 0px;
+    margin-right: -110px;
+    font-size: 30px;
+    left: 103px;
+    }
 
 .u-section-7 .u-text-5 {
-  font-size: 1.875rem;
-  margin: 10px auto 60px 100px;
+  margin-top: 20px;
+    margin-right: -46px;
+    margin-bottom: 36px;
+    font-size: 30px;
+    left: 100px;
 }
 
 @media (max-width: 991px) {
@@ -1008,6 +1084,7 @@
     margin-top: -92px;
     margin-right: 120px;
     margin-left: auto;
+    left: 0px;
   }
 
   .u-section-7 .u-text-5 {
@@ -1060,30 +1137,33 @@
   .u-section-7 .u-text-1 {
     margin-top: 56px;
     margin-left: 42px;
+    left: 0px;
   }
 
   .u-section-7 .u-text-2 {
     font-size: 1rem;
     margin-top: -48px;
+    left: 85px;
   }
 
   .u-section-7 .u-text-3 {
     font-size: 0.875rem;
     margin-top: 67px;
-    margin-left: 20px;
+    margin-left: 18px;
   }
 
   .u-section-7 .u-text-4 {
     font-size: 0.875rem;
     margin-top: -68px;
-    margin-right: 66px;
+    margin-right: -100px;
   }
 
   .u-section-7 .u-text-5 {
     font-size: 0.875rem;
     margin-top: 22px;
-    margin-right: 16px;
+    margin-right: -140px;
     margin-bottom: 36px;
+    left: 0px;
   }
 } .u-section-8 {
   background-image: url("images/Rectangle24.png");

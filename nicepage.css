@@ -2918,13 +2918,6 @@ a {
 .u-form-number input[type="range"]::-webkit-slider-thumb:hover {
   background: var(--thumb-hover-color);
 }
-
-.map-container {
-    float: right;
-    width: 50%;
-    margin-top: 50px; 
-}
-
 .u-form-number input[type="range"]::-webkit-slider-runnable-track {
   height: 2px;
   border: none;
@@ -2999,45 +2992,6 @@ a {
   --step-icon-size: 0px;
   
 }
-
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('background.jpg'); /* Путь к вашему изображению */
-    background-size: cover;
-    opacity: 0.7; /* Прозрачность заднего фона */
-    z-index: 1;
-}
-
-
-#popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-#popup {
-    display: none;
-}
-
 .u-form-progress-responsive {
   --step-icon-size: 0px;
 }
@@ -7952,7 +7906,7 @@ section.u-image:not(.u-hover-box),
   position: relative !important;
 }
 .u-expanded-height {
-  position: absolute !important;
+  position: !important;
   height: 100% !important;
 }
 @media (min-width: 1400px) {
@@ -24149,7 +24103,7 @@ span.product-remove:after {
 }
 .u-carousel-inner {
   position: relative;
-  width: 100%;
+  width: 101%;
   overflow: hidden;
 }
 .u-carousel-item {
@@ -24763,6 +24717,7 @@ a.u-button-style.u-border-11 {
 .u-field-input.u-field-input.u-border-12,
 a.u-button-style.u-border-12 {
   border-width: 12px;
+
 }
 .u-shape-svg.u-border-12 {
   stroke-width: 12px;
@@ -42758,7 +42713,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-menu-1 {
-  margin: -30px calc(((100% - 1140px) / 2)  + 67px) 0 auto;
+  margin: 24px calc(((100% - 1140px) / 2)  + 67px) 0 auto;
 }
 
 .u-header .u-nav-1 {
@@ -42838,7 +42793,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 575px) {
    .u-header {
-    min-height: 138px;
+    width: 440px;
+    min-height: 68px;
   }
 
   .u-header .u-image-1 {
@@ -42849,13 +42805,13 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-menu-1 {
     margin-left: calc(((100% - 340px) / 2)  + -22px);
-	top: 1rem;
+    top: 2.5rem;
   }
 
   .u-header .u-image-2 {
-	top: -1rem;
-    width: 265px;
-    height: 138px;
+    width: 200px;
+    height: 113px;
+    top: 20px;
   }
 }
  .u-footer {
