@@ -1316,11 +1316,6 @@ a {
   width: calc(100% +  49px);
 }
 
-@media only screen and (min-width: 768px) {
-    #container {
-        top: 40px;
-    }
-}
 
 .u-form-vertical.u-form-spacing-49 .u-form-group,
 .u-form-vertical.u-form-spacing-49 .u-form-step .u-form-group {
